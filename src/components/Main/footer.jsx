@@ -1,10 +1,10 @@
 import React from "react"
-import Container from "./common/Container"
+import Container from "../common/Container"
 
-import VideoSvg from "../../static/svg/video.svg"
-import InstagramSvg from "../../static/svg/instagram.svg"
-import FacebookSvg from "../../static/svg/facebook.svg"
-import TwitterSvg from "../../static/svg/twitter.svg"
+import VideoSvg from "../../../static/svg/video.svg"
+import InstagramSvg from "../../../static/svg/instagram.svg"
+import FacebookSvg from "../../../static/svg/facebook.svg"
+import TwitterSvg from "../../../static/svg/twitter.svg"
 
 const Footer = ({ siteTitle }) => {
   return (

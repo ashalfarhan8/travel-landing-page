@@ -2,9 +2,9 @@ import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
-import Nav from "./common/Nav"
-import Button from "./common/Button"
-import Container from "./common/Container"
+import Nav from "../common/Nav"
+import Button from "../common/Button"
+import Container from "../common/Container"
 
 const Header = ({ siteTitle }) => (
   <header className="p-4">

@@ -9,9 +9,9 @@ import Dots from "../../../static/svg/dots.svg"
 
 const Hero = () => {
   return (
-    <section className="relative">
+    <section className="relative h-screen mb-52">
       <Container>
-        <div className="wrapper flex items-center">
+        <div className="wrapper flex items-center w-full h-full">
           <div className="flex flex-col w-1/2">
             <p className="text-5xl font-bold">
               Get Some Beautiful View After Working Hard
@@ -24,18 +24,20 @@ const Hero = () => {
               Read More
             </Link>
           </div>
-          <div className="relative">
-            <HeroImg />
-            <Link
-              to="/"
-              className="absolute bottom-2 left-0 py-6 px-8 bg-white bg-opacity-75 flex items-center"
-            >
-              Our Destination <NextIcon className="ml-2" />
-            </Link>
-          </div>
         </div>
       </Container>
-      <Dots className="absolute -bottom-32 left-0" />
+      <div className="absolute right-0 top-0">
+        <div className="relative">
+          <HeroImg />
+          <Link
+            to="/"
+            className="absolute bottom-2 left-0 py-6 px-8 bg-white bg-opacity-75 flex items-center"
+          >
+            Our Destination <NextIcon className="ml-2" />
+          </Link>
+        </div>
+      </div>
+      <Dots className="absolute -bottom-48 left-0" />
     </section>
   )
 }
