@@ -1,5 +1,6 @@
 import React from "react"
 import Container from "../common/Container"
+import { Link } from "gatsby"
 
 import VideoSvg from "../../../static/svg/video.svg"
 import InstagramSvg from "../../../static/svg/instagram.svg"
@@ -57,7 +58,10 @@ const Footer = ({ siteTitle }) => {
           </div>
           <div>
             <p className="mx-auto text-center mt-8">
-              @ {siteTitle} | All Rights Reserved | {new Date().getFullYear()}
+              @ {siteTitle} | All Rights Reserved | {new Date().getFullYear()}{" "}
+              <br />
+              Copyright by{" "}
+              <Link to="https://github.com/ashalfarhan8">Ashal Farhan</Link>
             </p>
           </div>
         </div>
