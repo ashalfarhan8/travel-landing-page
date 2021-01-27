@@ -1,28 +1,36 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 const HeroImage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "hero-img.png" }) {
-        childImageSharp {
-          fixed(width: 580, height: 757) {
-            ...GatsbyImageSharpFixed
+  return (
+    <StaticQuery
+      query={graphql`
+        query {
+          sliderBg: file(relativePath: { eq: "hero-img.png" }) {
+            childImageSharp {
+              fixed(width: 580, height: 757) {
+                ...GatsbyImageSharpFixed
+              }
+            }
           }
         }
-      }
-    }
-  `)
+      `}
+      render={data => {
+        if (!data?.sliderBg?.childImageSharp?.fixed) {
+          return <div>Picture not found</div>
+        }
 
-  if (!data?.placeholderImage?.childImageSharp?.fixed) {
-    return <div>Picture not found</div>
-  }
-
-  return (
-    <Img
-      fixed={data.placeholderImage.childImageSharp.fixed}
-      className="absolute inset-0"
+        return (
+          <>
+            <Img
+              fixed={data.sliderBg.childImageSharp.fixed}
+              className="absolute inset-0"
+              alt="fixed img"
+            />
+          </>
+        )
+      }}
     />
   )
 }

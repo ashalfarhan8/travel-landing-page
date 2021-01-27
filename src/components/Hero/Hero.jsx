@@ -27,11 +27,11 @@ const Hero = () => {
         </div>
       </Container>
       <div className="absolute right-0 top-0">
-        <div className="relative">
+        <div className="relative w-auto">
           <HeroImg />
           <Link
             to="/"
-            className="absolute bottom-2 left-0 py-6 px-8 bg-white bg-opacity-75 flex items-center"
+            className="absolute bottom-0 left-0 py-6 px-8 bg-white bg-opacity-75 flex items-center"
           >
             Our Destination <NextIcon className="ml-2" />
           </Link>

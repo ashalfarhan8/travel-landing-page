@@ -9,7 +9,7 @@ import Globe from "../../../static/svg/globe.svg"
 
 const Offer = () => {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative">
       <OfferImg />
       <Container className="absolute z-1 inset-0">
         <p className="text-3xl font-bold text-center mt-24">What We Offer</p>
